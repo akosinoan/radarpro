@@ -8,9 +8,9 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import Container from "../ui/Container";
 
 const social = [
-  { icon: FaFacebookF, href: "#" },
-  { icon: FaInstagram, href: "#" },
-  { icon: FaLinkedinIn, href: "#" },
+  { icon: FaFacebookF, href: "#", label: "RadarPro on Facebook" },
+  { icon: FaInstagram, href: "#", label: "RadarPro on Instagram" },
+  { icon: FaLinkedinIn, href: "#", label: "RadarPro on LinkedIn" },
 ];
 
 const contact = [
@@ -53,7 +53,7 @@ export default function Footer() {
                   key={i}
                   href={s.href}
                   className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 hover:text-white hover:border-brand-500/60 transition-colors"
-                  aria-label="social"
+                  aria-label={s.label}
                 >
                   <s.icon className="h-4 w-4" />
                 </a>
@@ -97,7 +97,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/40">
           <p>© {new Date().getFullYear()} RadarPro. All rights reserved.</p>
-          <p>Your safety. Our priority. — 24/7. In real time.</p>
+          <p>Your safety. Our priority. 24/7. In real time.</p>
         </div>
       </Container>
     </footer>

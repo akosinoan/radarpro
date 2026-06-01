@@ -27,9 +27,9 @@ export const monitorTargets = [
 export const whyChoose = [
   { icon: HiOutlineShieldCheck, title: '24/7 Professional Monitoring', description: 'Eyes on your cameras every hour of every day.' },
   { icon: HiOutlineBolt, title: 'Rapid Alert Coordination', description: 'SLA-driven escalation with verified incidents.' },
-  { icon: HiOutlineUsers, title: 'Human-Monitored Operations', description: 'Trained operators — not just automated triggers.' },
+  { icon: HiOutlineUsers, title: 'Human-Monitored Operations', description: 'Trained operators, not just automated triggers.' },
   { icon: HiOutlineArrowsPointingOut, title: 'Scalable Monitoring', description: 'From 4 cameras to enterprise deployments.' },
-  { icon: HiOutlineSparkles, title: 'Peace of Mind', description: 'Sleep, travel, and operate — we keep watch.' },
+  { icon: HiOutlineSparkles, title: 'Peace of Mind', description: 'Sleep, travel, and operate while we keep watch.' },
   { icon: HiOutlineServerStack, title: 'Secure Infrastructure', description: 'Hardened systems and access controls.' },
 ]
 

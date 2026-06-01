@@ -8,6 +8,7 @@ import MonitoringSection from './sections/MonitoringSection'
 import WhyChooseUsSection from './sections/WhyChooseUsSection'
 import ReliabilitySection from './sections/ReliabilitySection'
 import CTASection from './sections/CTASection'
+import LocationSection from './sections/LocationSection'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <WhyChooseUsSection />
         <ReliabilitySection />
         <CTASection />
+        <LocationSection />
       </main>
       <Footer />
     </div>
