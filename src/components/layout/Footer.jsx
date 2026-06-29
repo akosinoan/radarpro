@@ -19,8 +19,7 @@ const contact = [
   { icon: HiOutlineEnvelope, label: "radarpro24.7@gmail.com" },
   {
     icon: HiOutlineMapPin,
-    label:
-      "St. Anthony cor St. James St., Tierra Verde Subd., Pallocan West, Batangas City",
+    label: "P. Herrera St., Poblacion 4, Batangas City",
   },
 ];
 

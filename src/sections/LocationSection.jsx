@@ -4,8 +4,7 @@ import SectionTitle from "../components/ui/SectionTitle";
 import GlassCard from "../components/ui/GlassCard";
 import AnimatedSection from "../components/shared/AnimatedSection";
 
-const ADDRESS =
-  "St. Anthony cor St. James St., Tierra Verde Subd., Pallocan West, Batangas City";
+const ADDRESS = "P. Herrera St., Poblacion 4, Batangas City";
 
 const mapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(
   ADDRESS,
