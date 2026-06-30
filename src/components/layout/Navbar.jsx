@@ -5,6 +5,7 @@ import Container from '../ui/Container'
 import Button from '../ui/Button'
 
 const links = [
+  { label: 'Promo', href: '#promo' },
   { label: 'Services', href: '#services' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Monitoring', href: '#monitoring' },

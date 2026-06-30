@@ -6,7 +6,7 @@ import AnimatedSection from "../components/shared/AnimatedSection";
 
 export default function CTASection() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-14 sm:py-32">
       <Container>
         <AnimatedSection>
           <GlassCard

@@ -6,7 +6,7 @@ import { whyChoose } from "../data/monitoringData";
 
 export default function WhyChooseUsSection() {
   return (
-    <section id="why" className="py-24 sm:py-32">
+    <section id="why" className="py-14 sm:py-32">
       <Container>
         <SectionTitle
           eyebrow="Why RadarPro"
@@ -14,7 +14,7 @@ export default function WhyChooseUsSection() {
           subtitle="Trained operators, hardened infrastructure, and an SLA-driven response not just recordings after the fact."
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 sm:mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whyChoose.map((w, i) => (
             <AnimatedSection key={w.title} delay={i * 0.06}>
               <FeatureCard {...w} />

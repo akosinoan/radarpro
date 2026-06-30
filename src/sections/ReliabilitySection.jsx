@@ -8,9 +8,9 @@ import flyerImg from "../assets/images/flyer-overview.jpg";
 
 export default function ReliabilitySection() {
   return (
-    <section className="py-24 sm:py-32 bg-white/[0.02] border-y border-white/5">
+    <section className="py-14 sm:py-32 bg-white/[0.02] border-y border-white/5">
       <Container>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
             <SectionTitle
               align="left"

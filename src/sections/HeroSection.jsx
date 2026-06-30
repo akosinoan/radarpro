@@ -19,7 +19,7 @@ export default function HeroSection() {
     <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
       <GlowBackground />
       <Container className="relative">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-10 items-center">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-10 items-center">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

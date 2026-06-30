@@ -16,7 +16,7 @@ const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeU
 
 export default function LocationSection() {
   return (
-    <section id="location" className="py-24 sm:py-32">
+    <section id="location" className="py-14 sm:py-32">
       <Container>
         <SectionTitle
           eyebrow="Visit Us"
@@ -24,7 +24,7 @@ export default function LocationSection() {
           subtitle="Drop by our monitoring office or reach out our team is available around the clock."
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 sm:mt-14 grid gap-6 lg:grid-cols-3">
           <AnimatedSection className="lg:col-span-1">
             <GlassCard hover={false} className="h-full p-8">
               <h3 className="text-lg font-semibold text-white">Our Office</h3>

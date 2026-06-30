@@ -6,7 +6,7 @@ import { services } from "../data/servicesData";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 sm:py-32">
+    <section id="services" className="py-14 sm:py-32">
       <Container>
         <SectionTitle
           eyebrow="What We Do"
@@ -14,7 +14,7 @@ export default function ServicesSection() {
           subtitle="From live monitoring to incident escalation, we operate as your remote security command center."
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 sm:mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <AnimatedSection key={s.title} delay={i * 0.06}>
               <FeatureCard {...s} />

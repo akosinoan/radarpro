@@ -2,11 +2,13 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import HeroSection from './sections/HeroSection'
 import FeaturesBarSection from './sections/FeaturesBarSection'
+import PromoSection from './sections/PromoSection'
 import ServicesSection from './sections/ServicesSection'
 import PricingSection from './sections/PricingSection'
 import MonitoringSection from './sections/MonitoringSection'
 import WhyChooseUsSection from './sections/WhyChooseUsSection'
 import ReliabilitySection from './sections/ReliabilitySection'
+import PartnersSection from './sections/PartnersSection'
 import CTASection from './sections/CTASection'
 import LocationSection from './sections/LocationSection'
 
@@ -17,11 +19,13 @@ export default function App() {
       <main>
         <HeroSection />
         <FeaturesBarSection />
+        <PromoSection />
         <ServicesSection />
         <PricingSection />
         <MonitoringSection />
         <WhyChooseUsSection />
         <ReliabilitySection />
+        <PartnersSection />
         <CTASection />
         <LocationSection />
       </main>
