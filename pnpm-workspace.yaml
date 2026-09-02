@@ -1,8 +1,17 @@
-# pnpm 11 requires an explicit build-script decision for each dependency that
-# ships one. esbuild and workerd genuinely need theirs to fetch native binaries.
-# sharp does not: it arrives via miniflare/wrangler and resolves its native code
-# from the prebuilt @img/sharp-linux-x64 package, so running its install script
-# only triggers a doomed node-gyp source build.
+# Cloudflare's builder runs pnpm 10 while local dev runs pnpm 11, and the two read
+# build-script approvals from different places. Both are declared so either version
+# installs cleanly:
+#   - pnpm 11 reads `allowBuilds` here
+#   - pnpm 10 reads `pnpm.onlyBuiltDependencies` in package.json
+# `packages` is required by pnpm 10 whenever this file exists, so it must stay.
+#
+# esbuild and workerd genuinely need their install scripts to fetch native binaries.
+# sharp does not: it arrives via miniflare/wrangler and resolves its native code from
+# the prebuilt @img/sharp-linux-x64 package, so running its script only triggers a
+# doomed node-gyp source build.
+packages:
+  - '.'
+
 allowBuilds:
   esbuild: true
   workerd: true
