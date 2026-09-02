@@ -1,57 +1,70 @@
+/* CCTV Monitoring Pricelist (2026 flyer).
+ * All tiers bill at a flat ₱750 per camera per month. */
+
 export const pricingPlans = [
   {
     name: 'Basic Package',
     cameras: '4 Cameras',
-    price: '₱2,500',
+    price: '₱3,000',
     period: '/month',
-    perCamera: '₱625 per camera / month',
-    perDay: 'That\'s only ₱20.8 per day',
+    perCamera: 'Only ₱750 per camera / month',
+    perDay: "About ₱25.00 a day, for 24-hour coverage",
     features: [
       '24/7 Live CCTV Monitoring',
       'Real-Time Incident Detection',
       'Suspicious Activity Monitoring',
-      'Basic Technical Support',
+      'Basic Technical Monitoring Support',
     ],
     cta: 'Choose Basic',
-    accent: 'from-emerald-500/30 to-emerald-700/10',
+    accent: 'from-white/[0.03] to-white/[0.01]',
   },
   {
     name: 'Standard Package',
     cameras: '8 Cameras',
-    price: '₱4,500',
+    price: '₱6,000',
     period: '/month',
-    perCamera: '₱562 per camera / month',
-    perDay: 'That\'s only ₱18.75 per day',
+    perCamera: 'Only ₱750 per camera / month',
+    perDay: "About ₱25.00 a day, for 24-hour coverage",
     features: [
       'Everything in Basic',
-      'Priority Alert Coordination',
+      'Unauthorized Entry Monitoring',
+      'Loitering & Vandalism Prevention',
+      'Emergency Incident Reporting',
       'Video Playback Assistance',
-      'Dedicated Monitoring Personnel',
     ],
     cta: 'Choose Standard',
     popular: true,
-    accent: 'from-brand-500/40 to-brand-900/10',
+    accent: 'from-brand-500/25 to-brand-900/10',
   },
   {
-    name: 'Custom Package',
-    cameras: '9+ Cameras',
-    price: 'Custom',
-    period: 'Quote',
-    perCamera: 'Tailored to your operation',
-    perDay: 'Volume pricing available',
+    name: 'Professional Package',
+    cameras: '16 Cameras',
+    price: '₱12,000',
+    period: '/month',
+    perCamera: 'Only ₱750 per camera / month',
+    perDay: "About ₱25.00 a day, for 24-hour coverage",
     features: [
-      'Number of cameras',
-      'Monitoring requirements',
-      'Storage setup',
-      'Remote access configuration',
-      'Monitoring scope and coverage',
+      'Everything in Standard',
+      'Coordination with Security Personnel & HOA Officers',
+      'Dedicated Monitoring Personnel',
+      'Networking & Remote Access Support',
     ],
-    cta: 'Request Quote',
-    accent: 'from-purple-500/40 to-fuchsia-700/10',
-    theme: {
-      ring: 'ring-1 ring-purple-400/40',
-      accentText: 'text-purple-300',
-      check: 'text-purple-400',
-    },
+    cta: 'Choose Professional',
+    accent: 'from-white/[0.05] to-white/[0.01]',
+    theme: { ring: 'ring-1 ring-white/20' },
   },
 ]
+
+export const pricingDisclaimer = 'Prices exclude cameras and installation.'
+
+export const importantNotes = [
+  'Existing CCTV system must already be installed.',
+  'Repair and maintenance of CCTV equipment shall be shouldered by the client / Homeowner Association.',
+  'RadarPro provides monitoring and coordination services only.',
+  'Access authorization and viewing permission must be provided by the CCTV system administrator or Homeowners Association.',
+  'Monitoring services are conducted remotely from the RadarPro monitoring center.',
+]
+
+/* Our Goal (pricelist flyer) */
+export const monitoringGoal =
+  'Helping prevent incidents through continuous 24/7 CCTV monitoring and real-time reporting.'

@@ -1,27 +1,63 @@
-import Container from "../components/ui/Container";
-import SectionTitle from "../components/ui/SectionTitle";
-import FeatureCard from "../components/ui/FeatureCard";
-import AnimatedSection from "../components/shared/AnimatedSection";
-import { whyChoose } from "../data/monitoringData";
+import { HiCheckCircle } from 'react-icons/hi2'
+import Container from '../components/ui/Container'
+import SectionTitle from '../components/ui/SectionTitle'
+import GlassCard from '../components/ui/GlassCard'
+import AnimatedSection from '../components/shared/AnimatedSection'
+import { whyChoose, whyChooseHeadline } from '../data/companyData'
+import { reliabilityItems } from '../data/monitoringData'
+import controlRoomImg from '../assets/images/operations-control-room.jpg'
 
 export default function WhyChooseUsSection() {
   return (
-    <section id="why" className="py-24 sm:py-32">
+    <section id="why" className="py-20 sm:py-28">
       <Container>
         <SectionTitle
           eyebrow="Why RadarPro"
-          title="The advantages that keep clients with us"
-          subtitle="Trained operators, hardened infrastructure, and an SLA-driven response not just recordings after the fact."
+          title="Why choose RadarPro"
+          subtitle={whyChooseHeadline}
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {whyChoose.map((w, i) => (
-            <AnimatedSection key={w.title} delay={i * 0.06}>
-              <FeatureCard {...w} />
+            <AnimatedSection key={w.title} delay={i * 0.05} className="h-full">
+              <GlassCard hover={false} className="h-full p-6">
+                <li className="list-none">
+                  <span className="text-sm font-semibold tabular-nums text-brand-500">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="mt-3 text-base font-semibold leading-snug text-white">{w.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">{w.description}</p>
+                </li>
+              </GlassCard>
             </AnimatedSection>
           ))}
-        </div>
+
+          <AnimatedSection delay={0.3} className="h-full">
+            <GlassCard hover={false} className="h-full overflow-hidden">
+              <div className="relative h-full min-h-[220px]">
+                <img
+                  src={controlRoomImg}
+                  alt="RadarPro operators monitoring live camera feeds"
+                  width="1400"
+                  height="270"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-navy-950/55" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950 to-transparent" />
+                <ul className="relative flex h-full flex-col justify-end gap-2 p-6">
+                  {reliabilityItems.slice(0, 4).map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-white/85">
+                      <HiCheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-signal-500" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </GlassCard>
+          </AnimatedSection>
+        </ol>
       </Container>
     </section>
-  );
+  )
 }

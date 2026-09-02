@@ -1,31 +1,36 @@
+import { MotionConfig } from 'framer-motion'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
+import MobileContactBar from './components/layout/MobileContactBar'
 import HeroSection from './sections/HeroSection'
-import FeaturesBarSection from './sections/FeaturesBarSection'
-import ServicesSection from './sections/ServicesSection'
-import PricingSection from './sections/PricingSection'
+import SolutionsSection from './sections/SolutionsSection'
+import IndustriesSection from './sections/IndustriesSection'
+import ProcessSection from './sections/ProcessSection'
 import MonitoringSection from './sections/MonitoringSection'
 import WhyChooseUsSection from './sections/WhyChooseUsSection'
-import ReliabilitySection from './sections/ReliabilitySection'
-import CTASection from './sections/CTASection'
+import CompanySection from './sections/CompanySection'
+import AssessmentSection from './sections/AssessmentSection'
 import LocationSection from './sections/LocationSection'
 
 export default function App() {
   return (
-    <div className="relative min-h-screen text-white">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <FeaturesBarSection />
-        <ServicesSection />
-        <PricingSection />
-        <MonitoringSection />
-        <WhyChooseUsSection />
-        <ReliabilitySection />
-        <CTASection />
-        <LocationSection />
-      </main>
-      <Footer />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="relative min-h-screen text-white">
+        <Navbar />
+        <main className="pb-20 md:pb-0">
+          <HeroSection />
+          <SolutionsSection />
+          <IndustriesSection />
+          <ProcessSection />
+          <MonitoringSection />
+          <WhyChooseUsSection />
+          <CompanySection />
+          <AssessmentSection />
+          <LocationSection />
+        </main>
+        <Footer />
+        <MobileContactBar />
+      </div>
+    </MotionConfig>
   )
 }

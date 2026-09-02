@@ -1,10 +1,10 @@
-# RadarPro: 24/7 CCTV Monitoring Landing Page
+# RadarPro Security Systems: Corporate Site
 
-A modern, conversion-focused marketing site for a professional CCTV monitoring service. Built as a polished single-page experience with a dark, glassmorphic aesthetic, smooth scroll-triggered motion, and a fully responsive layout.
+A modern, conversion-focused marketing site for a Philippine-based security solutions integrator covering CCTV surveillance, access control, intrusion detection, perimeter security, and 24/7 monitoring. Built as a polished single-page experience with a dark, glassmorphic aesthetic, smooth scroll-triggered motion, and a fully responsive layout.
 
 > **Live demo:** _[add your deployed URL here]_
 
-![RadarPro hero preview](src/assets/images/flyer-overview.jpg)
+![RadarPro CCTV monitoring pricelist](src/assets/images/pricelist-2026.jpg)
 
 ---
 
@@ -41,27 +41,36 @@ The codebase favors small, composable, single-responsibility components, with al
 src/
 ├── components/
 │   ├── ui/         # Primitives: Button, Badge, Container, GlassCard,
-│   │               #   FeatureCard, PricingCard, MonitoringCard, SectionTitle
+│   │               #   FeatureCard, ServiceCategoryCard, PricingCard,
+│   │               #   PartnerCard, ValueCard, SectionTitle
 │   ├── layout/     # Navbar, Footer
 │   └── shared/     # Reusable effects: AnimatedSection, GlowBackground,
-│                   #   FloatingBadge
+│                   #   FloatingBadge, VideoPlayer
 ├── sections/       # Page sections composed from the above
 │   ├── HeroSection.jsx
 │   ├── FeaturesBarSection.jsx
+│   ├── AboutSection.jsx
 │   ├── ServicesSection.jsx
+│   ├── SurveillanceSolutionsSection.jsx
+│   ├── IndustriesSection.jsx
 │   ├── PricingSection.jsx
-│   ├── MonitoringSection.jsx
+│   ├── VideoSection.jsx
 │   ├── WhyChooseUsSection.jsx
+│   ├── CoreValuesSection.jsx
 │   ├── ReliabilitySection.jsx
-│   └── CTASection.jsx
-├── data/           # Content/config: services, pricing, features, monitoring
+│   ├── PartnersSection.jsx
+│   ├── CTASection.jsx
+│   └── LocationSection.jsx
+├── data/           # Content/config: company, services, surveillance,
+│                   #   pricing, partners, features, contact
 ├── App.jsx         # Composes the page from sections
 └── index.css       # Tailwind theme tokens + global styling
 ```
 
 **Design decisions worth noting:**
 
-- **Data-driven content:** services, pricing tiers, and feature lists live in `src/data/*` as plain objects, keeping presentation and content decoupled and easy to maintain.
+- **Data-driven content:** company copy, services, industries, pricing tiers, partners, and feature lists live in `src/data/*` as plain objects, keeping presentation and content decoupled and easy to maintain.
+- **One source of truth for contact details:** phone, email, address, and website live only in `src/data/contactData.js`, which also builds the map embed, directions link, and prefilled enquiry `mailto:`s.
 - **Theme tokens over magic values:** brand colors, navy palette, and fonts are declared once as Tailwind `@theme` tokens in `index.css` and reused everywhere.
 - **Accessible interactions:** semantic landmarks, `aria-label`ed controls, and keyboard-friendly navigation.
 

@@ -6,6 +6,10 @@
   --color-brand-900: #1E3A8A;
   --color-brand-600: #2563EB;
   --color-brand-500: #3B82F6;
+  --color-brand-200: #BFDBFE;
+  /* Signal accent. Reserved for live / 24-7 / alert states only, never decoration. */
+  --color-signal-500: #F59E0B;
+  --color-signal-300: #FCD34D;
   --font-sans: Inter, system-ui, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -29,3 +33,24 @@ body {
 }
 
 ::selection { background: rgba(59, 130, 246, 0.4); }
+
+/* Keyboard focus: the browser default ring disappears against the navy ground. */
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
