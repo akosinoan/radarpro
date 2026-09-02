@@ -15,12 +15,29 @@ export default function useScrollSpy(ids, offset = 96) {
 
     if (!sections.length) return
 
+    // Tracked across callbacks: a callback only reports sections whose state
+    // *changed*, not everything currently on screen.
+    const visible = new Set()
+
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-        if (visible[0]) setActive(visible[0].target.id)
+        for (const e of entries) {
+          if (e.isIntersecting) visible.add(e.target)
+          else visible.delete(e.target)
+        }
+
+        // A nested target (#partners sits inside #company) makes both intersect at
+        // once. Prefer the most specific one, or the ancestor would always win on
+        // top position and the nested link could never go active.
+        const current = [...visible]
+        const specific = current.filter(
+          (el) => !current.some((other) => other !== el && el.contains(other)),
+        )
+
+        const topmost = specific.sort(
+          (a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top,
+        )[0]
+        if (topmost) setActive(topmost.id)
       },
       { rootMargin: `-${offset}px 0px -60% 0px`, threshold: 0 },
     )

@@ -50,8 +50,15 @@ export const pricingPlans = [
       'Networking & Remote Access Support',
     ],
     cta: 'Choose Professional',
-    accent: 'from-white/[0.05] to-white/[0.01]',
-    theme: { ring: 'ring-1 ring-white/20' },
+    // Top tier reads as gold rather than brand blue: it marks Professional as the
+    // premium option without competing with the blue "Most Popular" flag on Standard.
+    accent: 'from-signal-500/20 to-signal-500/[0.03]',
+    theme: {
+      ring: 'ring-1 ring-signal-500/45',
+      accentText: 'text-signal-300',
+      check: 'text-signal-500',
+      cta: 'border-signal-500/40 hover:border-signal-500/70 hover:bg-signal-500/10',
+    },
   },
 ]
 

@@ -1,0 +1,9 @@
+# pnpm 11 requires an explicit build-script decision for each dependency that
+# ships one. esbuild and workerd genuinely need theirs to fetch native binaries.
+# sharp does not: it arrives via miniflare/wrangler and resolves its native code
+# from the prebuilt @img/sharp-linux-x64 package, so running its install script
+# only triggers a doomed node-gyp source build.
+allowBuilds:
+  esbuild: true
+  workerd: true
+  sharp: false

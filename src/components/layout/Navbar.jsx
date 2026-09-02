@@ -11,18 +11,16 @@ import useScrolled from '../shared/useScrolled'
  * Five items, all visible from `md` up. An earlier version hid three links behind an
  * `xl` breakpoint, which silently removed whole sections from the nav between 768px
  * and 1279px with no overflow affordance. Keep this list short enough to always fit.
+ *
+ * Order mirrors the section order in App.jsx, so scanning the nav top-to-bottom
+ * matches scrolling the page top-to-bottom.
  */
 const links = [
-<<<<<<< HEAD
   { label: 'Solutions', href: '#solutions' },
-=======
-  { label: 'Promo', href: '#promo' },
-  { label: 'Services', href: '#services' },
-  { label: 'Pricing', href: '#pricing' },
->>>>>>> refs/remotes/origin/main
-  { label: 'Monitoring', href: '#monitoring' },
   { label: 'Industries', href: '#industries' },
+  { label: 'Monitoring', href: '#monitoring' },
   { label: 'Company', href: '#company' },
+  { label: 'Partners', href: '#partners' },
 ]
 
 const sectionIds = links.map((l) => l.href.slice(1))

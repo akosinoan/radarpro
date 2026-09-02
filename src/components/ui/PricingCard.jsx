@@ -62,7 +62,7 @@ export default function PricingCard({ plan, horizontal = false }) {
           `Hi RadarPro Team,\n\nI'd like to inquire about the ${name} (${cameras}).\n\nPlease share more details on availability, setup, and next steps.\n\nThanks!`,
         )}
         variant={popular ? 'primary' : 'outline'}
-        className={horizontal ? 'mt-6 w-full sm:w-auto sm:self-start' : 'mt-8 w-full'}
+        className={`${horizontal ? 'mt-6 w-full sm:w-auto sm:self-start' : 'mt-8 w-full'} ${theme?.cta ?? ''}`}
       >
         {cta}
       </Button>

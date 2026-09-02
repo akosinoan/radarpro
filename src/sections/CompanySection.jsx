@@ -67,7 +67,10 @@ export default function CompanySection() {
           </AnimatedSection>
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-14">
+        {/* Anchor target for the Partners nav link. Unlike the top-level sections,
+            this block sits mid-section, so it needs its own scroll-margin to clear
+            the fixed navbar; 24 (96px) matches useScrollSpy's offset. */}
+        <div id="partners" className="mt-16 scroll-mt-24 border-t border-white/10 pt-14">
           <SectionTitle
             align="left"
             eyebrow="Partner Network"
