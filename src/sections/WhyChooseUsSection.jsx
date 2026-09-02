@@ -9,7 +9,11 @@ import controlRoomImg from '../assets/images/operations-control-room.jpg'
 
 export default function WhyChooseUsSection() {
   return (
+<<<<<<< HEAD
     <section id="why" className="py-20 sm:py-28">
+=======
+    <section id="why" className="py-14 sm:py-32">
+>>>>>>> refs/remotes/origin/main
       <Container>
         <SectionTitle
           eyebrow="Why RadarPro"
@@ -17,7 +21,11 @@ export default function WhyChooseUsSection() {
           subtitle={whyChooseHeadline}
         />
 
+<<<<<<< HEAD
         <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+=======
+        <div className="mt-10 sm:mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+>>>>>>> refs/remotes/origin/main
           {whyChoose.map((w, i) => (
             <AnimatedSection key={w.title} delay={i * 0.05} className="h-full">
               <GlassCard hover={false} className="h-full p-6">

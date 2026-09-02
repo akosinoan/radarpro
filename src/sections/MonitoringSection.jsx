@@ -13,11 +13,18 @@ import {
 
 export default function MonitoringSection() {
   return (
+<<<<<<< HEAD
     <section id="monitoring" className="relative py-20 sm:py-28 bg-white/[0.02] border-y border-white/5">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-72 w-[60%] rounded-full bg-brand-600/20 blur-[120px]" />
       </div>
 
+=======
+    <section
+      id="monitoring"
+      className="py-14 sm:py-32 bg-white/[0.02] border-y border-white/5"
+    >
+>>>>>>> refs/remotes/origin/main
       <Container>
         <SectionTitle
           eyebrow={
@@ -30,6 +37,7 @@ export default function MonitoringSection() {
           subtitle="A separate service from installation: our operators watch your existing CCTV around the clock and coordinate the response. Priced per camera, per month."
         />
 
+<<<<<<< HEAD
         <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_0.85fr] lg:items-start">
           <div className="grid gap-5 sm:grid-cols-2">
             {pricingPlans.slice(0, 2).map((plan, i) => (
@@ -39,6 +47,12 @@ export default function MonitoringSection() {
             ))}
             <AnimatedSection delay={0.12} className="h-full sm:col-span-2">
               <PricingCard plan={pricingPlans[2]} horizontal />
+=======
+        <div className="mt-10 sm:mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {monitorTargets.map((t, i) => (
+            <AnimatedSection key={t.title} delay={i * 0.05}>
+              <MonitoringCard {...t} />
+>>>>>>> refs/remotes/origin/main
             </AnimatedSection>
           </div>
 

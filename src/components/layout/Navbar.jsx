@@ -13,7 +13,13 @@ import useScrolled from '../shared/useScrolled'
  * and 1279px with no overflow affordance. Keep this list short enough to always fit.
  */
 const links = [
+<<<<<<< HEAD
   { label: 'Solutions', href: '#solutions' },
+=======
+  { label: 'Promo', href: '#promo' },
+  { label: 'Services', href: '#services' },
+  { label: 'Pricing', href: '#pricing' },
+>>>>>>> refs/remotes/origin/main
   { label: 'Monitoring', href: '#monitoring' },
   { label: 'Industries', href: '#industries' },
   { label: 'Company', href: '#company' },
